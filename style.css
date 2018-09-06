@@ -1,0 +1,27 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+	background: #c6ffdd;
+  	background: -webkit-linear-gradient(to right, #c6ffdd, #fbd786, #f7797d); 
+  	background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d); 
+}
+
+.container {
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+
+
+button {
+	width: 200px;
+	line-height: 1.6;
+	font-size: 1.6rem;
+	border: solid 5px #22a7f0;
+	border-radius: 10px;
+	background: #c6ffdd !important;
+	font-weight: 400;
+	margin-right: 10px
+}
+
