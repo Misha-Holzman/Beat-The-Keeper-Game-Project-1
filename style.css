@@ -1,9 +1,8 @@
-* {
-	box-sizing: border-box;
+body {
 	font-family: 'Roboto', sans-serif;
-	background: #c6ffdd;
-  	background: -webkit-linear-gradient(to right, #c6ffdd, #fbd786, #f7797d); 
-  	background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d); 
+	background: url(assets/Goal–background-image2.jpg);
+	background-size: ;
+	background-size: 100% 100%;
 }
 
 .container {
@@ -13,9 +12,8 @@
 	align-items: center;
 }
 
-
 button {
-	width: 200px;
+	width: 150px;
 	line-height: 1.6;
 	font-size: 1.6rem;
 	border: solid 5px #22a7f0;
@@ -24,4 +22,42 @@ button {
 	font-weight: 400;
 	margin-right: 10px
 }
+
+.scoreBoard {
+	display: inline-block;
+}
+
+
+.ball {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 200px;
+	animation: shootLeft 1s;
+	animation -duration: 1s;
+
+}
+
+
+@keyframes shootLeft {
+  from {
+    transform: translateX(0px) /*translateY(500px)*/
+  }
+  to {
+    transform: translate(-200px, -450px)
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
