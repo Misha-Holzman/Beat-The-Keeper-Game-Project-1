@@ -23,29 +23,97 @@ button {
 	margin-right: 10px
 }
 
+.leftGoal {
+	border: black solid 1px;
+	padding: 15% 6% 12% 6%;
+	margin-bottom: 15px;
+}
+
+.middleGoal {
+	border: black solid 1px;
+	padding: 15% 4% 12% 4%;
+	margin-bottom: 15px;
+}
+
+.rightGoal {
+	border: black solid 1px;
+	padding: 15% 6% 12% 6%;
+	margin-bottom: 15px;
+}
+
 .scoreBoard {
 	display: inline-block;
 }
 
 
-.ball {
+#stillBall {
 	display: flex;
 	justify-content: center;
-	margin-bottom: 200px;
-	animation: shootLeft 1s;
-	animation -duration: 1s;
+	margin-bottom: 250px;
+}
 
+
+.ballLeft {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 250px;
+	animation: shootLeft 1s infinite;
 }
 
 
 @keyframes shootLeft {
   from {
-    transform: translateX(0px) /*translateY(500px)*/
+    transform: translateX(0px) 
   }
   to {
     transform: translate(-200px, -450px)
   }
 }
+
+
+
+.ballMiddle {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 250px;
+	animation: shootMiddle 1s;
+	animation -duration: 1s;
+
+}
+
+@keyframes shootMiddle {
+    transform: translateX(0px) 
+  from {
+  }
+  to {
+    transform: translate(0px, -450px)
+  }
+}
+
+
+
+.ballRight {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 250px;
+	animation: shootRight 1s;
+	animation -duration: 1s;
+
+}
+
+@keyframes shootRight {
+  from {
+    transform: translateX(0px) 
+  }
+  to {
+    transform: translate(200px, -450px)
+  }
+}
+
+
+
+
+
 
 
 
