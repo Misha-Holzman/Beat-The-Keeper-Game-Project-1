@@ -12,17 +12,19 @@ let goalieScore = 0
 
 
 	document.querySelector(".leftGoal").addEventListener("click", kickBallLeft);
-	document.querySelector(".leftGoal").addEventListener("click", animateBallLeft);
 	document.querySelector(".middleGoal").addEventListener("click", kickBallMiddle);
-	document.querySelector(".rightGoal").addEventListener("click", animateBallRight);
+	document.querySelector(".rightGoal").addEventListener("click", kickBallRight);
 
 
-	function animateBallLeft() {
-			let ballElement = document.querySelector('#stillBall')
-   			ballElement.classList.toggle("ballLeft");
-		}
 
 	function kickBallLeft() {
+		function animateBallLeft() {
+			let ballElement = document.querySelector('#stillBall')
+   			ballElement.classList.add("ballLeft");
+   			setTimeout(function() {ballElement.classList.remove("ballLeft")}, 800);
+		}
+		 animateBallLeft()
+		
 		const keeperNumber = Math.floor(Math.random() * 2) + 1;
 		if (leftGoalNumber !== keeperNumber) {
 			console.log('GOAL!!')
@@ -43,7 +45,8 @@ let goalieScore = 0
 	function kickBallMiddle() {
 		function animateBallMiddle() {
 			let ballElement = document.querySelector('#stillBall')
-   			ballElement.classList.toggle("ballMiddle");
+   			ballElement.classList.add("ballMiddle");
+			setTimeout(function() {ballElement.classList.remove("ballMiddle")}, 800);   			
 		}
 		animateBallMiddle()
 
@@ -64,11 +67,15 @@ let goalieScore = 0
 	}
 
 
-	function animateBallRight() {
-		let ballElement = document.querySelector('#stillBall')
-   		ballElement.classList.toggle("ballRight");
 
-   		function kickBallRight() {
+   	function kickBallRight() {
+		function animateBallRight() {
+			let ballElement = document.querySelector('#stillBall')
+   			ballElement.classList.add("ballRight");
+   			setTimeout(function() {ballElement.classList.remove("ballRight")}, 800);   			
+   		}
+		animateBallRight()
+
 		const keeperNumber = Math.floor(Math.random() * 2) + 1;
 		if (rightGoalNumber !== keeperNumber) {
 			console.log('GOAL!!')
@@ -84,8 +91,7 @@ let goalieScore = 0
 			}
 		}
 	}
-		kickBallRight()
-	}
+	
 	
 
 	

@@ -25,19 +25,19 @@ button {
 
 .leftGoal {
 	border: black solid 1px;
-	padding: 15% 6% 12% 6%;
+	padding: 15% 6% 15% 6%;
 	margin-bottom: 15px;
 }
 
 .middleGoal {
 	border: black solid 1px;
-	padding: 15% 4% 12% 4%;
+	padding: 15% 4% 15% 4%;
 	margin-bottom: 15px;
 }
 
 .rightGoal {
 	border: black solid 1px;
-	padding: 15% 6% 12% 6%;
+	padding: 15% 6% 15% 6%;
 	margin-bottom: 15px;
 }
 
@@ -57,7 +57,7 @@ button {
 	display: flex;
 	justify-content: center;
 	margin-bottom: 250px;
-	animation: shootLeft 1s infinite;
+	animation: shootLeft 1s;
 }
 
 
