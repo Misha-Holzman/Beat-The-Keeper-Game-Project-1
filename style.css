@@ -20,12 +20,98 @@ body {
 
 
 
-.scoreBoard h2 {
-	background: #fc4a1a; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #fc4a1a, #f7b733); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #fc4a1a, #f7b733);;
+#scoreBoard {
+	background: #fc4a1a;
+    background: -webkit-linear-gradient(to right, #fc4a1a, #f7b733);
+    background: linear-gradient(to right, #fc4a1a, #f7b733);
+    width: 15%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 15px 0 15px 15px;
+    border: black solid 3px;
+    border-radius: 30px;
 }
 
+#scoreBoard h2 {
+	display:inline;
+	padding-left: 5px;
+	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	font-weight: 900
+}
+
+
+#goalScreen {
+	display: flex;
+	justify-content: center;
+}
+
+
+
+#goalImage {
+	border-radius: 100px;
+	border: 3px solid black;
+	height: 360px;
+	position:absolute;
+	animation-name: bounceIn;
+  	animation-duration: 500ms;
+  	animation-timing-function: linear;
+  	animation-fill-mode: forwards;
+  	animation-delay: 700ms;
+}
+
+
+@keyframes bounceIn {
+   0%{
+    opacity: 0;
+    transform: scale(0.3) translate3d(0,0,0);
+  }
+  50%{
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+  80%{
+    opacity: 1;
+    transform: scale(0.89);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1) translate3d(0,0,0);
+  }
+}
+
+#goalScreen {
+	animation-delay: 1500ms;
+	-webkit-animation-name: rollOut;
+    animation-name: rollOut;
+    -webkit-animation-duration: 1000ms;
+    animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes rollOut {
+    0% {
+       opacity: 1;
+       -webkit-transform: translateX(0px) rotate(0deg);
+    }
+    100% {
+       opacity: 0;
+       -webkit-transform: translateX(100%) rotate(120deg);
+    }
+}
+         
+@keyframes rollOut {
+    0% {
+    	opacity: 1;
+        transform: translateX(0px) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100%) rotate(120deg);
+    }
+}
 
 
 
@@ -60,11 +146,9 @@ body {
 	display: flex;
 	align-items: flex-end;
 	justify-content: center;
-	margin-top: 272px;
+	margin-top: 280px;
 	margin-right: 12px;
 }
-
-
 
 
 

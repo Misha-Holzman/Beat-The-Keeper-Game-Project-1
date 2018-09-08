@@ -4,22 +4,28 @@
 	<meta charset="UTF-8">
 	<title>Beat The Keeper</title>
 	<link href="http://fonts.googleapis.com/css?family=Roboto">
-  	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet"> 	
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-	<div class="scoreBoard">
+	<div id="scoreBoard">
 		<h2>Player Score:<h2 class="playerScoreNumber"></h2></h2>
+		<br>
+		<br>
 		<h2>Goalie Score:<h2 class="goalieScoreNumber"></h2></h2>
 	</div>
 
-	<div class="startScreen">
+	<div id="startScreen">
 		
 	</div>
-	<div class="goalScreen">
+	<div id="goalScreen">
+		<img id="goalImage" src="assets/GOAL.jpg">
+	</div>
+	<div id="winScreen">
 
 	</div>
-	<div class="winScreen">
+	<div id="looseScreen">
 
 	</div>
 
@@ -39,7 +45,7 @@
 	</div>
 	<div class="ballContainer">
 		<div id="stillBall">
-			<img src="assets/soccer-ball.png">
+			<img src="assets/soccer-ball.png" height="60px">
 		</div>
 	</div>
 
