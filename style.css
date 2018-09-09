@@ -133,14 +133,13 @@ body {
 .middleGoal {
 	padding: 4% 4% 10% 4%;
 	margin-top: 14%;
+
 }
 
 .rightGoal {
 	padding: 8% 6% 4% 6%;
 	margin-top: 14%;
 }
-
-
 
 
 
@@ -218,7 +217,7 @@ body {
 
 
 
-.goalie > .goalieLeft {
+.goalie > .goalieReady {
 	width: 110px;
 	position: fixed;
 	left: 50%;
@@ -228,31 +227,69 @@ body {
 
 
 /*I NEED TO UNDERSTAND THIS ANIMATION BELOW BETTER*/
-.goalieLeft {
+.goalieReady {
 	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
   	transform: translate3d(0, 0, 0);
 }
 
 @keyframes shake {
-  10%, 90% {
-    transform: translate3d(-1px, 0, 0);
+  10% {
+    transform: translate3d(-2px, 0, 0);
   }
   
-  20%, 80% {
-    transform: translate3d(2px, 0, 0);
+  90% {
+    transform: translate3d(3px, 0, 0);
   }
 
-  30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0);
+  60% {
+    transform: translate3d(-5px, 0, 0);
   }
 
-  40%, 60% {
-    transform: translate3d(4px, 0, 0);
+  30% {
+    transform: translate3d(5px, 0, 0);
   }
+}
+
+.goalieDive > .goalieDiveLeft {
+	width: 220px;
+	position: absolute;
+	left: 50%;
+	margin-left: -225px;
+	z-index: -1;
+	bottom: 20px;
+}
+
+.goalieDive > .goalieJumpUp {
+	width: 90px;
+	position: absolute;
+	left: 50%;
+	margin-left: -52px;
+	z-index: -1;
+	bottom: 1px;
 }
 
 
 
+
+.goalieDive > .goalieDiveRight {
+	width: 220px;
+	position: absolute;
+	left: 50%;
+	margin-left: 20px;
+	z-index: -1;
+	bottom: 20px;
+}
+
+
+.goalieDive {
+	height: 250px;
+	width: 550px;
+	position: absolute;
+	left: 50%;
+	margin-left: -275px;
+	bottom: 43%;
+	z-index: -1
+}
 
 
 

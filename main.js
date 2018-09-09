@@ -17,6 +17,13 @@ document.querySelector(".rightGoal").addEventListener("click", kickBallRight);
 
 
 
+// function hideStartScreen() {
+// }
+
+
+// function hideLostScreen() {
+// }
+
 function hideGoalAnimation() {
 	let goalScreen = document.querySelector("#goalScreen")
 	goalScreen.style.display ='none';
@@ -30,14 +37,28 @@ function hideWinScreen() {
 hideWinScreen()
 
 
-function hideStartScreen() {
-
+function hideGoalieDiveLeft() {
+	let diveLeft = document.querySelector(".goalieDiveLeft")
+	diveLeft.style.display ='none';
 }
+hideGoalieDiveLeft()
 
 
-function hideLostScreen() {
-
+function hideGoalieJumpUp() {
+	let jumpUp = document.querySelector(".goalieJumpUp")
+	jumpUp.style.display ='none';
 }
+hideGoalieJumpUp()
+
+function hideGoalieDiveRight() {
+	let diveRight = document.querySelector(".goalieDiveRight")
+	diveRight.style.display ='none';
+}
+hideGoalieDiveRight()
+
+
+
+
 
 
 
@@ -48,9 +69,30 @@ function hideLostScreen() {
    			ballElement.classList.add("ballLeft");
    			setTimeout(function() {ballElement.classList.remove("ballLeft")}, 800);
 		}
-		 animateBallLeft()
+		animateBallLeft()
 		
+		function hideReadyGoalie() {
+			let readyGoalie = document.querySelector(".goalieReady")
+			readyGoalie.style.display ='none';
+		}
+		setTimeout(function() {hideReadyGoalie()}, 300);
+
 		const keeperNumber = Math.floor(Math.random() * 2) + 1;
+
+		function keeperDive() {
+			if (keeperNumber === 1) {
+				let leftDive = document.querySelector(".goalieDiveLeft")
+				leftDive.style.display = '';
+			} else if (keeperNumber === 2) {
+				let diveUp = document.querySelector(".goalieJumpUp")
+				diveUp.style.display = '';
+			} else if (keeperNumber === 3) {
+				let rightDive = document.querySelector(".goalieDiveRight")
+				rightDive.style.display = '';
+			}
+		}
+		setTimeout(function() {keeperDive()}, 300);
+
 
 		if (leftGoalNumber !== keeperNumber) {
 			console.log('GOAL!!')
@@ -81,7 +123,26 @@ function hideLostScreen() {
 				alert('You lost')
 			}
 		}
+
+		function keeperDiveReset() {
+			let leftDive = document.querySelector(".goalieDiveLeft")
+			leftDive.style.display = 'none';
+
+			let diveUp = document.querySelector(".goalieJumpUp")
+			diveUp.style.display = 'none';
+
+			let rightDive = document.querySelector(".goalieDiveRight")
+			rightDive.style.display = 'none';
+		}
+		setTimeout(function() {keeperDiveReset()}, 1900);
+
+		function showReadyGoalie() {
+			let resetGoalie = document.querySelector(".goalieReady")
+			resetGoalie.style.display ='';
+		};
+		setTimeout(function() {showReadyGoalie()}, 2000);
 	}
+
 
 
 	function kickBallMiddle() {
@@ -92,7 +153,28 @@ function hideLostScreen() {
 		}
 		animateBallMiddle()
 
+		function hideReadyGoalie() {
+			let readyGoalie = document.querySelector(".goalieReady")
+			readyGoalie.style.display ='none';
+		}
+		setTimeout(function() {hideReadyGoalie()}, 300);
+
 		const keeperNumber = Math.floor(Math.random() * 2) + 1;
+
+		function keeperDive() {
+			if (keeperNumber === 1) {
+				let leftDive = document.querySelector(".goalieDiveLeft")
+				leftDive.style.display = '';
+			} else if (keeperNumber === 2) {
+				let diveUp = document.querySelector(".goalieJumpUp")
+				diveUp.style.display = '';
+			} else if (keeperNumber === 3) {
+				let rightDive = document.querySelector(".goalieDiveRight")
+				rightDive.style.display = '';
+			}
+		}
+		setTimeout(function() {keeperDive()}, 300);
+
 		if (middleGoalNumber !== keeperNumber) {
 			console.log('GOAL!!')
 			userScore++;
@@ -127,6 +209,24 @@ function hideLostScreen() {
 				alert('You lost')
 			}
 		}
+
+		function keeperDiveReset() {
+			let leftDive = document.querySelector(".goalieDiveLeft")
+			leftDive.style.display = 'none';
+
+			let diveUp = document.querySelector(".goalieJumpUp")
+			diveUp.style.display = 'none';
+
+			let rightDive = document.querySelector(".goalieDiveRight")
+			rightDive.style.display = 'none';
+		}
+		setTimeout(function() {keeperDiveReset()}, 1900);
+
+		function showReadyGoalie() {
+			let resetGoalie = document.querySelector(".goalieReady")
+			resetGoalie.style.display ='';
+		};
+		setTimeout(function() {showReadyGoalie()}, 2000);
 	}
 
 
@@ -139,7 +239,28 @@ function hideLostScreen() {
    		}
 		animateBallRight()
 
+		function hideReadyGoalie() {
+			let readyGoalie = document.querySelector(".goalieReady")
+			readyGoalie.style.display ='none';
+		}
+		setTimeout(function() {hideReadyGoalie()}, 300);
+
 		const keeperNumber = Math.floor(Math.random() * 2) + 1;
+
+		function keeperDive() {
+			if (keeperNumber === 1) {
+				let leftDive = document.querySelector(".goalieDiveLeft")
+				leftDive.style.display = '';
+			} else if (keeperNumber === 2) {
+				let diveUp = document.querySelector(".goalieJumpUp")
+				diveUp.style.display = '';
+			} else if (keeperNumber === 3) {
+				let rightDive = document.querySelector(".goalieDiveRight")
+				rightDive.style.display = '';
+			}
+		}
+		setTimeout(function() {keeperDive()}, 300);
+
 		if (rightGoalNumber !== keeperNumber) {
 			console.log('GOAL!!')
 			userScore++;
@@ -175,10 +296,28 @@ function hideLostScreen() {
 				alert('You lost')
 			}
 		}
+
+		function keeperDiveReset() {
+			let leftDive = document.querySelector(".goalieDiveLeft")
+			leftDive.style.display = 'none';
+
+			let diveUp = document.querySelector(".goalieJumpUp")
+			diveUp.style.display = 'none';
+
+			let rightDive = document.querySelector(".goalieDiveRight")
+			rightDive.style.display = 'none';
+		}
+		setTimeout(function() {keeperDiveReset()}, 1900);
+
+
+		function showReadyGoalie() {
+			let resetGoalie = document.querySelector(".goalieReady")
+			resetGoalie.style.display ='';
+		};
+		setTimeout(function() {showReadyGoalie()}, 2000);
+
 	}
 	
-	
-
 	
 
 
