@@ -23,6 +23,23 @@ function hideGoalAnimation() {
 }
 hideGoalAnimation()
 
+function hideWinScreen() {
+	let winScreen = document.querySelector("#winScreen")
+	winScreen.style.display ='none';
+}
+hideWinScreen()
+
+
+function hideStartScreen() {
+
+}
+
+
+function hideLostScreen() {
+
+}
+
+
 
 
 	function kickBallLeft() {
@@ -38,21 +55,22 @@ hideGoalAnimation()
 		if (leftGoalNumber !== keeperNumber) {
 			console.log('GOAL!!')
 			userScore++;
-			
 			let addToUserScore = document.querySelector(".playerScoreNumber")
 			addToUserScore.textContent = userScore
-
 
 			function showGoalAnimation() {
 				let goalScreen = document.querySelector("#goalScreen")
 				goalScreen.style.display = '';
 				setTimeout(function() {goalScreen.style.display ='none';}, 2000);
 			};
-			
 			setTimeout(function() {showGoalAnimation()}, 1000);
 
 			if (userScore === 5) {
-				alert('You won')
+				function showWinAnimation() {
+					let winScreen = document.querySelector("#winScreen")
+					winScreen.style.display ='';
+				}
+				setTimeout(function() {showWinAnimation()}, 1500);
 			}
 		} else {
 			console.log('Save :(')
@@ -89,7 +107,16 @@ hideGoalAnimation()
 			let addToUserScore = document.querySelector(".playerScoreNumber")
 			addToUserScore.textContent = userScore
 			if (userScore === 5) {
-				alert('You won')
+				function hideGoalAnimation() {
+					let noGoalScreen = document.querySelector("#goalScreen")
+					noGoalScreen.style.display ='none';
+				}
+				hideGoalAnimation()
+				function showWinAnimation() {
+					let winScreen = document.querySelector("#winScreen")
+					winScreen.style.display = '';
+				};
+				setTimeout(function() {showWinAnimation()}, 1500);
 			}
 		} else {
 			console.log('Save :(')
@@ -126,8 +153,18 @@ hideGoalAnimation()
 			
 			let addToUserScore = document.querySelector(".playerScoreNumber")
 			addToUserScore.textContent = userScore
+
 			if (userScore === 5) {
-				alert('You won')
+				function hideGoalAnimation() {
+					let noGoalScreen = document.querySelector("#goalScreen")
+					noGoalScreen.style.display ='none';
+				}
+				hideGoalAnimation()
+				function showWinAnimation() {
+					let winScreen = document.querySelector("#winScreen")
+					winScreen.style.display = '';
+				};
+				setTimeout(function() {showWinAnimation()}, 1500);
 			}
 		} else {
 			console.log('Save :(')
@@ -143,14 +180,6 @@ hideGoalAnimation()
 	
 
 	
-
-
-	
-
-
-
-
-
 
 
 

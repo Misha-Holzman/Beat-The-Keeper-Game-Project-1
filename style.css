@@ -9,16 +9,13 @@ body {
     position: fixed; 
     left: 0px; 
     top: 0px; 
-    z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */
+    z-index: -999;
 }
 
 .stretch {
     width:100%;
     height:100%;
 }
-
-
-
 
 #scoreBoard {
 	background: #fc4a1a;
@@ -53,13 +50,29 @@ body {
 	border-radius: 100px;
 	border: 3px solid black;
 	height: 360px;
-	position:absolute;
+	position: absolute;
 	animation-name: bounceIn;
   	animation-duration: 500ms;
   	animation-timing-function: linear;
   	animation-fill-mode: forwards;
-  	animation-delay: 700ms;
 }
+
+
+#winScreen {
+	display: flex;
+	justify-content: center;
+}
+
+#winImage {
+	border-radius: 50px;
+	border: 3px solid black;
+	position: absolute;
+	animation-name: bounceIn;
+  	animation-duration: 500ms;
+  	animation-timing-function: linear;
+  	animation-fill-mode: forwards;
+}
+
 
 
 @keyframes bounceIn {
@@ -82,25 +95,13 @@ body {
 }
 
 #goalScreen {
-	animation-delay: 1500ms;
-	-webkit-animation-name: rollOut;
+	animation-delay: 1000ms;
     animation-name: rollOut;
-    -webkit-animation-duration: 1000ms;
-    animation-duration: 1000ms;
-    -webkit-animation-fill-mode: both;
+    animation-duration: 800ms;
     animation-fill-mode: both;
 }
 
-@-webkit-keyframes rollOut {
-    0% {
-       opacity: 1;
-       -webkit-transform: translateX(0px) rotate(0deg);
-    }
-    100% {
-       opacity: 0;
-       -webkit-transform: translateX(100%) rotate(120deg);
-    }
-}
+
          
 @keyframes rollOut {
     0% {
@@ -116,6 +117,7 @@ body {
 
 
 
+
 .container {
 	display: flex;
 	height: 20vh;
@@ -125,17 +127,17 @@ body {
 
 .leftGoal {
 	padding: 8% 6% 4% 6%;
-	margin-top: 19%;
+	margin-top: 14%;
 }
 
 .middleGoal {
 	padding: 4% 4% 10% 4%;
-	margin-top: 19%;
+	margin-top: 14%;
 }
 
 .rightGoal {
 	padding: 8% 6% 4% 6%;
-	margin-top: 19%;
+	margin-top: 14%;
 }
 
 
@@ -146,7 +148,7 @@ body {
 	display: flex;
 	align-items: flex-end;
 	justify-content: center;
-	margin-top: 280px;
+	margin-top: 265px;
 	margin-right: 12px;
 }
 
@@ -158,6 +160,7 @@ body {
 	justify-content: center;
 	margin-bottom: 250px;
 	animation: shootLeft 1s;
+	z-index: 2;
 }
 
 
@@ -178,7 +181,7 @@ body {
 	margin-bottom: 250px;
 	animation: shootMiddle 1s;
 	animation -duration: 1s;
-
+	z-index: 2;
 }
 
 @keyframes shootMiddle {
@@ -198,7 +201,7 @@ body {
 	margin-bottom: 250px;
 	animation: shootRight 1s;
 	animation -duration: 1s;
-
+	z-index: 2;
 }
 
 @keyframes shootRight {
@@ -214,6 +217,39 @@ body {
 
 
 
+
+.goalie > .goalieLeft {
+	width: 110px;
+	position: fixed;
+	left: 50%;
+	margin-left: -55px;
+	z-index: -1;
+}
+
+
+/*I NEED TO UNDERSTAND THIS ANIMATION BELOW BETTER*/
+.goalieLeft {
+	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  	transform: translate3d(0, 0, 0);
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
 
 
 
