@@ -314,7 +314,7 @@ hideRestartButton()
 			}
 		}
 
-		function keeperDiveReset() {
+		function keeperDiveReset() { 
 			let leftDive = document.querySelector(".goalieDiveLeft")
 			leftDive.style.display = 'none';
 			let diveUp = document.querySelector(".goalieJumpUp")
