@@ -6,11 +6,13 @@ Live link:
 
 
 Technologies:
- - HTML5
- – CSS
- – CSS Animations
- – Vanilla JavaScript
- – Adobe Photoshop
+<ul>
+	<li>HTML5</li>
+	<li>CSS</li>
+	<li>CSS Animations</li>
+	<li>Vanilla JavaScript</li>
+	<li>Adobe Photoshop</li>
+</ul>
 
 
 
