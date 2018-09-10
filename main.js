@@ -16,14 +16,6 @@ document.querySelector(".middleGoal").addEventListener("click", kickBallMiddle);
 document.querySelector(".rightGoal").addEventListener("click", kickBallRight);
 
 
-
-// function hideStartScreen() {
-// }
-
-
-// function hideLostScreen() {
-// }
-
 function hideGoalAnimation() {
 	let goalScreen = document.querySelector("#goalScreen")
 	goalScreen.style.display ='none';
@@ -36,13 +28,11 @@ function hideWinScreen() {
 }
 hideWinScreen()
 
-
 function hideGoalieDiveLeft() {
 	let diveLeft = document.querySelector(".goalieDiveLeft")
 	diveLeft.style.display ='none';
 }
 hideGoalieDiveLeft()
-
 
 function hideGoalieJumpUp() {
 	let jumpUp = document.querySelector(".goalieJumpUp")
@@ -55,11 +45,6 @@ function hideGoalieDiveRight() {
 	diveRight.style.display ='none';
 }
 hideGoalieDiveRight()
-
-
-
-
-
 
 
 
@@ -77,7 +62,7 @@ hideGoalieDiveRight()
 		}
 		setTimeout(function() {hideReadyGoalie()}, 300);
 
-		const keeperNumber = Math.floor(Math.random() * 2) + 1;
+		const keeperNumber = Math.floor(Math.random() * 3) + 1;
 
 		function keeperDive() {
 			if (keeperNumber === 1) {
@@ -93,9 +78,7 @@ hideGoalieDiveRight()
 		}
 		setTimeout(function() {keeperDive()}, 300);
 
-
 		if (leftGoalNumber !== keeperNumber) {
-			console.log('GOAL!!')
 			userScore++;
 			let addToUserScore = document.querySelector(".playerScoreNumber")
 			addToUserScore.textContent = userScore
@@ -115,7 +98,6 @@ hideGoalieDiveRight()
 				setTimeout(function() {showWinAnimation()}, 1500);
 			}
 		} else {
-			console.log('Save :(')
 			goalieScore++;
 			let addToGoalieScore = document.querySelector(".goalieScoreNumber")
 			addToGoalieScore.textContent = goalieScore
@@ -159,7 +141,7 @@ hideGoalieDiveRight()
 		}
 		setTimeout(function() {hideReadyGoalie()}, 300);
 
-		const keeperNumber = Math.floor(Math.random() * 2) + 1;
+		const keeperNumber = Math.floor(Math.random() * 3) + 1;
 
 		function keeperDive() {
 			if (keeperNumber === 1) {
@@ -176,7 +158,6 @@ hideGoalieDiveRight()
 		setTimeout(function() {keeperDive()}, 300);
 
 		if (middleGoalNumber !== keeperNumber) {
-			console.log('GOAL!!')
 			userScore++;
 
 			function showGoalAnimation() {
@@ -201,7 +182,6 @@ hideGoalieDiveRight()
 				setTimeout(function() {showWinAnimation()}, 1500);
 			}
 		} else {
-			console.log('Save :(')
 			goalieScore++;
 			let addToGoalieScore = document.querySelector(".goalieScoreNumber")
 			addToGoalieScore.textContent = goalieScore
@@ -245,7 +225,7 @@ hideGoalieDiveRight()
 		}
 		setTimeout(function() {hideReadyGoalie()}, 300);
 
-		const keeperNumber = Math.floor(Math.random() * 2) + 1;
+		const keeperNumber = Math.floor(Math.random() * 3) + 1;
 
 		function keeperDive() {
 			if (keeperNumber === 1) {
@@ -262,7 +242,6 @@ hideGoalieDiveRight()
 		setTimeout(function() {keeperDive()}, 300);
 
 		if (rightGoalNumber !== keeperNumber) {
-			console.log('GOAL!!')
 			userScore++;
 
 			function showGoalAnimation() {
@@ -288,7 +267,6 @@ hideGoalieDiveRight()
 				setTimeout(function() {showWinAnimation()}, 1500);
 			}
 		} else {
-			console.log('Save :(')
 			goalieScore++;
 			let addToGoalieScore = document.querySelector(".goalieScoreNumber")
 			addToGoalieScore.textContent = goalieScore
@@ -309,35 +287,12 @@ hideGoalieDiveRight()
 		}
 		setTimeout(function() {keeperDiveReset()}, 1900);
 
-
 		function showReadyGoalie() {
 			let resetGoalie = document.querySelector(".goalieReady")
 			resetGoalie.style.display ='';
 		};
 		setTimeout(function() {showReadyGoalie()}, 2000);
-
 	}
-	
-	
-
-
-
-
-
-
-
-
-
-// document.querySelector(".ballContainer").addEventListener('keydown', animateBallLeft)
-
-// function animateBallLeft (evt) {
-// 	// const keyName = evt.key;
-// 	console.log(evt)
-// 	const sideStickAudio = document.querySelector('.sideStick');
-// 	if (event.code == 'KeyZ') {
-// 		sideStickAudio.play()
-// 	}
-// };
 
 
 

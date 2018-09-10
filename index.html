@@ -9,16 +9,22 @@
 </head>
 
 <body>
+	<audio id="player" src="sounds/Soccer-Game-Background-Sound.m4a"></audio>
+	<div> 
+  		<button onclick="document.getElementById('player').play()">Play</button> 
+  		<button onclick="document.getElementById('player').pause()">Pause</button> 
+  	</div>
+
+	<div id="background">
+    	<img src="assets/Goal–background-image2.jpg" class="stretch" alt="" />
+	</div>
+
+
 	<div id="scoreBoard">
 		<h2>Player Score:<h2 class="playerScoreNumber"></h2></h2>
 		<br>
 		<br>
 		<h2>Goalie Score:<h2 class="goalieScoreNumber line-2"></h2></h2>
-	</div>
-
-
-	<div id="startScreen">
-		<img src="">
 	</div>
 
 
@@ -31,10 +37,6 @@
 		<img id="winImage" src="assets/win-screen.jpg">
 	</div>
 
-
-	<div id="looseScreen">
-
-	</div>
 
 	<div class="container">
 		<div class="leftGoal"><span><br><br><img class="target" src="assets/target.png"></span></div>
@@ -49,15 +51,12 @@
 		<img class="goalieReady" src="assets/Goalie-middle-ready">
 	</div>
 
+
 	<div class="goalieDive">
 		<img class="goalieJumpUp" src="assets/Goalie-dive-up.png">
-
-
 		<img class="goalieDiveLeft" src="assets/Goalie-dive-left.png">
-
 		<img class="goalieDiveRight" src="assets/Goalie-dive-right.png">
 	</div>
-
 
 
 	<div class="ballContainer">
@@ -66,9 +65,7 @@
 		</div>
 	</div>
 
-	<div id="background">
-    	<img src="assets/Goal–background-image2.jpg" class="stretch" alt="" />
-	</div>
+
 
 
   	<script src="main.js"></script>
