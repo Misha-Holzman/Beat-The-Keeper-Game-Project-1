@@ -28,6 +28,14 @@ Screenshots:
 
 
 
+Installation Instructions:
+
+Fork this repository to your own account
+Clone this file on to your machine
+
+
+
+
 
 bibliography: 
 
