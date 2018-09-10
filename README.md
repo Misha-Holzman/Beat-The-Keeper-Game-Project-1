@@ -1,6 +1,7 @@
-# BeatTheKeeper-Project_1-MHolzman
+# Project #1: Beat The Keeper - Misha Holzman
 
 BEAT THE KEEPER
+arcade game
 
 Live link: 
 
