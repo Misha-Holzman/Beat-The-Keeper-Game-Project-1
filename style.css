@@ -38,14 +38,6 @@ body {
 	font-weight: 900
 }
 
-
-#goalScreen {
-	display: flex;
-	justify-content: center;
-}
-
-
-
 #goalImage {
 	border-radius: 100px;
 	border: 3px solid black;
@@ -57,6 +49,25 @@ body {
   	animation-fill-mode: forwards;
 }
 
+#goalScreen {
+	display: flex;
+	justify-content: center;
+	animation-delay: 1000ms;
+    animation-name: rollOut;
+    animation-duration: 800ms;
+    animation-fill-mode: both;
+}
+  
+@keyframes rollOut {
+    0% {
+    	opacity: 1;
+        transform: translateX(0px) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100%) rotate(120deg);
+    }
+}
 
 #winScreen {
 	display: flex;
@@ -72,8 +83,6 @@ body {
   	animation-timing-function: linear;
   	animation-fill-mode: forwards;
 }
-
-
 
 @keyframes bounceIn {
    0%{
@@ -93,30 +102,6 @@ body {
     transform: scale(1) translate3d(0,0,0);
   }
 }
-
-#goalScreen {
-	animation-delay: 1000ms;
-    animation-name: rollOut;
-    animation-duration: 800ms;
-    animation-fill-mode: both;
-}
-
-
-         
-@keyframes rollOut {
-    0% {
-    	opacity: 1;
-        transform: translateX(0px) rotate(0deg);
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(100%) rotate(120deg);
-    }
-}
-
-
-
-
 
 .container {
 	display: flex;
@@ -142,7 +127,6 @@ body {
 }
 
 
-
 #stillBall {
 	display: flex;
 	align-items: flex-end;
@@ -150,8 +134,6 @@ body {
 	margin-top: 265px;
 	margin-right: 14px;
 }
-
-
 
 
 .ballLeft {
@@ -162,7 +144,6 @@ body {
 	z-index: 2;
 }
 
-
 @keyframes shootLeft {
   from {
     transform: translateX(0px) 
@@ -171,8 +152,6 @@ body {
     transform: translate(-220px, -260px)
   }
 }
-
-
 
 .ballMiddle {
 	display: flex;
@@ -191,8 +170,6 @@ body {
     transform: translate(0px, -355px)
   }
 }
-
-
 
 .ballRight {
 	display: flex;
@@ -225,8 +202,6 @@ body {
 	z-index: -1;
 }
 
-
-/*I NEED TO UNDERSTAND THIS ANIMATION BELOW BETTER*/
 .goalieReady {
 	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
   	transform: translate3d(0, 0, 0);
@@ -268,9 +243,6 @@ body {
 	bottom: 1px;
 }
 
-
-
-
 .goalieDive > .goalieDiveRight {
 	width: 220px;
 	position: absolute;
@@ -279,7 +251,6 @@ body {
 	z-index: -1;
 	bottom: 20px;
 }
-
 
 .goalieDive {
 	height: 250px;

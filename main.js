@@ -102,7 +102,7 @@ hideGoalieDiveRight()
 			let addToGoalieScore = document.querySelector(".goalieScoreNumber")
 			addToGoalieScore.textContent = goalieScore
 			if (goalieScore === 5) {
-				alert('You lost')
+				alert('You lost :( Better luck next time')
 			}
 		}
 
@@ -124,6 +124,8 @@ hideGoalieDiveRight()
 		};
 		setTimeout(function() {showReadyGoalie()}, 2000);
 	}
+
+
 
 
 
@@ -186,7 +188,7 @@ hideGoalieDiveRight()
 			let addToGoalieScore = document.querySelector(".goalieScoreNumber")
 			addToGoalieScore.textContent = goalieScore
 			if (goalieScore === 5) {
-				alert('You lost')
+				alert('You lost :( Try again in 4 years')
 			}
 		}
 
@@ -208,6 +210,8 @@ hideGoalieDiveRight()
 		};
 		setTimeout(function() {showReadyGoalie()}, 2000);
 	}
+
+
 
 
 
@@ -271,7 +275,7 @@ hideGoalieDiveRight()
 			let addToGoalieScore = document.querySelector(".goalieScoreNumber")
 			addToGoalieScore.textContent = goalieScore
 			if (goalieScore === 5) {
-				alert('You lost')
+				alert('You lost :( Better luck next time')
 			}
 		}
 
