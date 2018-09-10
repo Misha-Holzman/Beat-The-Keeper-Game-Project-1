@@ -46,6 +46,12 @@ function hideGoalieDiveRight() {
 }
 hideGoalieDiveRight()
 
+function hideRestartButton() {
+	let resetBtn = document.querySelector("input")
+	resetBtn.style.display ='none';
+}
+hideRestartButton()
+
 
 
 	function kickBallLeft() {
@@ -96,6 +102,12 @@ hideGoalieDiveRight()
 					winScreen.style.display ='';
 				}
 				setTimeout(function() {showWinAnimation()}, 1500);
+
+				function showRestartButton() {
+					let resetButton = document.querySelector("input")
+					resetButton.style.display ='';
+				}
+				showRestartButton()
 			}
 		} else {
 			goalieScore++;
@@ -103,16 +115,19 @@ hideGoalieDiveRight()
 			addToGoalieScore.textContent = goalieScore
 			if (goalieScore === 5) {
 				alert('You lost :( Better luck next time')
+				function showRestartButton() {
+					let resetButton = document.querySelector("input")
+					resetButton.style.display ='';
+				}
+				showRestartButton()
 			}
 		}
 
 		function keeperDiveReset() {
 			let leftDive = document.querySelector(".goalieDiveLeft")
 			leftDive.style.display = 'none';
-
 			let diveUp = document.querySelector(".goalieJumpUp")
 			diveUp.style.display = 'none';
-
 			let rightDive = document.querySelector(".goalieDiveRight")
 			rightDive.style.display = 'none';
 		}
@@ -182,6 +197,12 @@ hideGoalieDiveRight()
 					winScreen.style.display = '';
 				};
 				setTimeout(function() {showWinAnimation()}, 1500);
+
+				function showRestartButton() {
+					let resetButton = document.querySelector("input")
+					resetButton.style.display ='';
+				}
+				showRestartButton()
 			}
 		} else {
 			goalieScore++;
@@ -189,16 +210,19 @@ hideGoalieDiveRight()
 			addToGoalieScore.textContent = goalieScore
 			if (goalieScore === 5) {
 				alert('You lost :( Try again in 4 years')
+				function showRestartButton() {
+					let resetButton = document.querySelector("input")
+					resetButton.style.display ='';
+				}
+				showRestartButton()
 			}
 		}
 
 		function keeperDiveReset() {
 			let leftDive = document.querySelector(".goalieDiveLeft")
 			leftDive.style.display = 'none';
-
 			let diveUp = document.querySelector(".goalieJumpUp")
 			diveUp.style.display = 'none';
-
 			let rightDive = document.querySelector(".goalieDiveRight")
 			rightDive.style.display = 'none';
 		}
@@ -269,6 +293,12 @@ hideGoalieDiveRight()
 					winScreen.style.display = '';
 				};
 				setTimeout(function() {showWinAnimation()}, 1500);
+
+				function showRestartButton() {
+					let resetButton = document.querySelector("input")
+					resetButton.style.display ='';
+				}
+				showRestartButton()
 			}
 		} else {
 			goalieScore++;
@@ -276,16 +306,19 @@ hideGoalieDiveRight()
 			addToGoalieScore.textContent = goalieScore
 			if (goalieScore === 5) {
 				alert('You lost :( Better luck next time')
+				function showRestartButton() {
+					let resetButton = document.querySelector("input")
+					resetButton.style.display ='';
+				}
+				showRestartButton()
 			}
 		}
 
 		function keeperDiveReset() {
 			let leftDive = document.querySelector(".goalieDiveLeft")
 			leftDive.style.display = 'none';
-
 			let diveUp = document.querySelector(".goalieJumpUp")
 			diveUp.style.display = 'none';
-
 			let rightDive = document.querySelector(".goalieDiveRight")
 			rightDive.style.display = 'none';
 		}

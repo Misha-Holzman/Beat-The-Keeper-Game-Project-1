@@ -132,7 +132,7 @@ body {
 	align-items: flex-end;
 	justify-content: center;
 	margin-top: 265px;
-	margin-right: 14px;
+	margin-right: 5px;
 }
 
 
@@ -188,8 +188,6 @@ body {
     transform: translate(220px, -260px)
   }
 }
-
-
 
 
 
@@ -269,7 +267,12 @@ button {
 	color: gray;
 }
 
-
+input {
+	position: absolute;
+	background-color: lightgreen;
+	border-radius: 10px;
+	color: gray;
+}
 
 
 
